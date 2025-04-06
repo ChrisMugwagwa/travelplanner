@@ -1,6 +1,6 @@
 export async function fetchActivities(lat, lng, category = 'attractions', radius= 10) {
   try {
-    const res = await fetch(`/api/tripadvisor?lat=${lat}&lng=${lng}&category=${category}&radius=${radius}`);
+    const res = await fetch(`13.41.223.126/api/tripadvisor?lat=${lat}&lng=${lng}&category=${category}&radius=${radius}`);
     if (!res.ok) throw new Error('Failed to fetch activities');
     const data = await res.json();
 
