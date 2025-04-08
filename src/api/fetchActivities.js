@@ -8,7 +8,7 @@ export async function fetchActivities(lat, lng, category = 'attractions', radius
     const detailedData = await Promise.all(
       data.map(async (location) => {
         try {
-          const detailRes = await fetch(`/api/tripadvisor/details?id=${location.location_id}`);
+          const detailRes = await fetch(`13.41.223.126/api/tripadvisor/details?id=${location.location_id}`);
           const details = await detailRes.json();
           return { ...location, details };
         } catch (detailErr) {
